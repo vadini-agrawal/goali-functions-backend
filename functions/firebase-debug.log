@@ -1,0 +1,618 @@
+[debug] [2020-04-13T23:58:08.189Z] ----------------------------------------------------------------------
+[debug] [2020-04-13T23:58:08.190Z] Command:       /Users/vadini/.nvm/versions/node/v13.0.1/bin/node /Users/vadini/.nvm/versions/node/v13.0.1/bin/firebase serve
+[debug] [2020-04-13T23:58:08.190Z] CLI Version:   7.16.1
+[debug] [2020-04-13T23:58:08.190Z] Platform:      darwin
+[debug] [2020-04-13T23:58:08.190Z] Node Version:  v13.0.1
+[debug] [2020-04-13T23:58:08.191Z] Time:          Mon Apr 13 2020 18:58:08 GMT-0500 (Central Daylight Time)
+[debug] [2020-04-13T23:58:08.191Z] ----------------------------------------------------------------------
+[debug] [2020-04-13T23:58:08.191Z] 
+[debug] [2020-04-13T23:58:08.199Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-13T23:58:08.199Z] > authorizing via signed-in user
+[debug] [2020-04-13T23:58:08.200Z] [iam] checking project goali-94346 for permissions ["firebase.projects.get"]
+[debug] [2020-04-13T23:58:08.202Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-04-13T23:58:08.202Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-04-13T23:58:08.513Z] <<< HTTP RESPONSE 200
+[debug] [2020-04-13T23:58:08.540Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/goali-94346:testIamPermissions  
+
+[debug] [2020-04-13T23:58:08.841Z] <<< HTTP RESPONSE 200
+[debug] [2020-04-13T23:58:08.842Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/goali-94346  
+ 
+[debug] [2020-04-13T23:58:09.109Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/vadini/goali-functions'...
+[info] 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "13"
+[info] ✔  functions: functions emulator started at http://localhost:5000
+[info] i  functions: Watching "/Users/vadini/goali-functions/functions" for Cloud Functions...
+[debug] [2020-04-13T23:58:09.146Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-13T23:58:09.147Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-04-13T23:58:09.147Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-13T23:58:09.147Z] [worker-~diagnostic~-cea88e8f-0cd6-4254-a952-7ff071819033]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_6855.sock
+[debug] [2020-04-13T23:58:09.147Z] [worker-~diagnostic~-cea88e8f-0cd6-4254-a952-7ff071819033]: BUSY
+[debug] [2020-04-13T23:58:09.405Z] [runtime-status] [6855] Functions runtime initialized. {"cwd":"/Users/vadini/goali-functions/functions","node_version":"13.0.1"}
+[debug] [2020-04-13T23:58:09.406Z] [runtime-status] [6855] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-13T23:58:09.408Z] [runtime-status] [6855] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-13T23:58:09.409Z] [runtime-status] [6855] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-13T23:58:09.410Z] [runtime-status] [6855] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (/Users/vadini/goali-functions/functions/node_modules/express/lib/router/route.js:202:15)
+    at Function.app.<computed> [as post] (/Users/vadini/goali-functions/functions/node_modules/express/lib/application.js:482:19)
+    at Object.<anonymous> (/Users/vadini/goali-functions/functions/index.js:32:5)
+    at Module._compile (internal/modules/cjs/loader.js:971:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1011:10)
+    at Module.load (internal/modules/cjs/loader.js:822:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:730:14)
+    at Module.require (internal/modules/cjs/loader.js:864:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /Users/vadini/.nvm/versions/node/v13.0.1/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:761:33
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-04-13T23:58:09.808Z] [worker-~diagnostic~-cea88e8f-0cd6-4254-a952-7ff071819033]: exited
+[debug] [2020-04-13T23:58:09.808Z] [worker-~diagnostic~-cea88e8f-0cd6-4254-a952-7ff071819033]: FINISHED
+[debug] [2020-04-13T23:58:32.157Z] File /Users/vadini/goali-functions/functions/handlers/users.js changed, reloading triggers
+[debug] [2020-04-13T23:58:33.162Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-04-13T23:58:33.173Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-13T23:58:33.173Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-04-13T23:58:33.174Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-13T23:58:33.174Z] [worker-~diagnostic~-25cd6b5f-e27c-4520-a16a-c9f7f0e0349c]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_6863.sock
+[debug] [2020-04-13T23:58:33.174Z] [worker-~diagnostic~-25cd6b5f-e27c-4520-a16a-c9f7f0e0349c]: BUSY
+[debug] [2020-04-13T23:58:33.546Z] [runtime-status] [6863] Functions runtime initialized. {"cwd":"/Users/vadini/goali-functions/functions","node_version":"13.0.1"}
+[debug] [2020-04-13T23:58:33.547Z] [runtime-status] [6863] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-13T23:58:33.550Z] [runtime-status] [6863] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-13T23:58:33.551Z] [runtime-status] [6863] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-13T23:58:33.552Z] [runtime-status] [6863] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (/Users/vadini/goali-functions/functions/node_modules/express/lib/router/route.js:202:15)
+    at Function.app.<computed> [as post] (/Users/vadini/goali-functions/functions/node_modules/express/lib/application.js:482:19)
+    at Object.<anonymous> (/Users/vadini/goali-functions/functions/index.js:32:5)
+    at Module._compile (internal/modules/cjs/loader.js:971:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1011:10)
+    at Module.load (internal/modules/cjs/loader.js:822:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:730:14)
+    at Module.require (internal/modules/cjs/loader.js:864:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /Users/vadini/.nvm/versions/node/v13.0.1/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:761:33
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-04-13T23:58:34.270Z] [worker-~diagnostic~-25cd6b5f-e27c-4520-a16a-c9f7f0e0349c]: exited
+[debug] [2020-04-13T23:58:34.270Z] [worker-~diagnostic~-25cd6b5f-e27c-4520-a16a-c9f7f0e0349c]: FINISHED
+[debug] [2020-04-13T23:59:22.516Z] File /Users/vadini/goali-functions/functions/index.js changed, reloading triggers
+[debug] [2020-04-13T23:59:23.519Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-04-13T23:59:23.524Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-13T23:59:23.524Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-04-13T23:59:23.524Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-13T23:59:23.524Z] [worker-~diagnostic~-24350cae-b8a3-4bb5-8516-df8debd33137]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_6876.sock
+[debug] [2020-04-13T23:59:23.524Z] [worker-~diagnostic~-24350cae-b8a3-4bb5-8516-df8debd33137]: BUSY
+[debug] [2020-04-13T23:59:23.916Z] [runtime-status] [6876] Functions runtime initialized. {"cwd":"/Users/vadini/goali-functions/functions","node_version":"13.0.1"}
+[debug] [2020-04-13T23:59:23.919Z] [runtime-status] [6876] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-13T23:59:23.920Z] [runtime-status] [6876] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-13T23:59:23.921Z] [runtime-status] [6876] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-13T23:59:23.922Z] [runtime-status] [6876] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[info] ✔  functions[api]: http function initialized (http://localhost:5000/goali-94346/us-central1/api).
+[info] i  functions[createNotificationOnLike]: function ignored because the firestore emulator does not exist or is not running.
+[info] i  functions[deleteNotificationOnUnlike]: function ignored because the firestore emulator does not exist or is not running.
+[info] i  functions[createNotificationOnComment]: function ignored because the firestore emulator does not exist or is not running.
+[debug] [2020-04-13T23:59:24.661Z] [worker-~diagnostic~-24350cae-b8a3-4bb5-8516-df8debd33137]: IDLE
+[debug] [2020-04-13T23:59:35.969Z] File /Users/vadini/goali-functions/functions/index.js changed, reloading triggers
+[debug] [2020-04-13T23:59:36.972Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-13T23:59:36.972Z] [worker-~diagnostic~-24350cae-b8a3-4bb5-8516-df8debd33137]: FINISHING
+[debug] [2020-04-13T23:59:36.977Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-13T23:59:36.978Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-13T23:59:36.978Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-13T23:59:36.978Z] [worker-~diagnostic~-fa7ae433-b461-4805-82a0-1959535f4133]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_6879.sock
+[debug] [2020-04-13T23:59:36.978Z] [worker-~diagnostic~-fa7ae433-b461-4805-82a0-1959535f4133]: BUSY
+[debug] [2020-04-13T23:59:36.982Z] [worker-~diagnostic~-24350cae-b8a3-4bb5-8516-df8debd33137]: exited
+[debug] [2020-04-13T23:59:36.982Z] [worker-~diagnostic~-24350cae-b8a3-4bb5-8516-df8debd33137]: FINISHED
+[debug] [2020-04-13T23:59:37.329Z] [runtime-status] [6879] Functions runtime initialized. {"cwd":"/Users/vadini/goali-functions/functions","node_version":"13.0.1"}
+[debug] [2020-04-13T23:59:37.330Z] [runtime-status] [6879] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-13T23:59:37.332Z] [runtime-status] [6879] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-13T23:59:37.333Z] [runtime-status] [6879] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-13T23:59:37.333Z] [runtime-status] [6879] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-13T23:59:38.076Z] [worker-~diagnostic~-fa7ae433-b461-4805-82a0-1959535f4133]: IDLE
+[debug] [2020-04-13T23:59:42.927Z] ----------------------------------------------------------------------
+[debug] [2020-04-13T23:59:42.928Z] Command:       /Users/vadini/.nvm/versions/node/v13.0.1/bin/node /Users/vadini/.nvm/versions/node/v13.0.1/bin/firebase serve
+[debug] [2020-04-13T23:59:42.928Z] CLI Version:   7.16.1
+[debug] [2020-04-13T23:59:42.928Z] Platform:      darwin
+[debug] [2020-04-13T23:59:42.928Z] Node Version:  v13.0.1
+[debug] [2020-04-13T23:59:42.929Z] Time:          Mon Apr 13 2020 18:59:42 GMT-0500 (Central Daylight Time)
+[debug] [2020-04-13T23:59:42.929Z] ----------------------------------------------------------------------
+[debug] [2020-04-13T23:59:42.929Z] 
+[debug] [2020-04-13T23:59:42.939Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-13T23:59:42.939Z] > authorizing via signed-in user
+[debug] [2020-04-13T23:59:42.939Z] [iam] checking project goali-94346 for permissions ["firebase.projects.get"]
+[debug] [2020-04-13T23:59:42.941Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/goali-94346:testIamPermissions  
+
+[debug] [2020-04-13T23:59:43.230Z] <<< HTTP RESPONSE 200
+[debug] [2020-04-13T23:59:43.232Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/goali-94346  
+ 
+[debug] [2020-04-13T23:59:43.371Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/vadini/goali-functions'...
+[info] 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "13"
+[info] ✔  functions: functions emulator started at http://localhost:5000
+[info] i  functions: Watching "/Users/vadini/goali-functions/functions" for Cloud Functions...
+[debug] [2020-04-13T23:59:43.668Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-13T23:59:43.668Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-04-13T23:59:43.668Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-13T23:59:43.669Z] [worker-~diagnostic~-8d5c7f69-0958-47c0-89d0-e4e6085a1ed2]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_6887.sock
+[debug] [2020-04-13T23:59:43.669Z] [worker-~diagnostic~-8d5c7f69-0958-47c0-89d0-e4e6085a1ed2]: BUSY
+[debug] [2020-04-13T23:59:43.887Z] [runtime-status] [6887] Functions runtime initialized. {"cwd":"/Users/vadini/goali-functions/functions","node_version":"13.0.1"}
+[debug] [2020-04-13T23:59:43.887Z] [runtime-status] [6887] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-13T23:59:43.889Z] [runtime-status] [6887] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-13T23:59:43.890Z] [runtime-status] [6887] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-13T23:59:43.890Z] [runtime-status] [6887] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[info] ✔  functions[api]: http function initialized (http://localhost:5000/goali-94346/us-central1/api).
+[info] i  functions[createNotificationOnLike]: function ignored because the firestore emulator does not exist or is not running.
+[info] i  functions[deleteNotificationOnUnlike]: function ignored because the firestore emulator does not exist or is not running.
+[info] i  functions[createNotificationOnComment]: function ignored because the firestore emulator does not exist or is not running.
+[debug] [2020-04-13T23:59:44.302Z] [worker-~diagnostic~-8d5c7f69-0958-47c0-89d0-e4e6085a1ed2]: IDLE
+[debug] [2020-04-14T00:00:58.678Z] File /Users/vadini/goali-functions/functions/handlers/users.js changed, reloading triggers
+[debug] [2020-04-14T00:00:59.682Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-14T00:00:59.682Z] [worker-~diagnostic~-8d5c7f69-0958-47c0-89d0-e4e6085a1ed2]: FINISHING
+[debug] [2020-04-14T00:00:59.689Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-14T00:00:59.689Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-14T00:00:59.690Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-14T00:00:59.690Z] [worker-~diagnostic~-a9433fa3-332c-47b2-84d0-96a6b2009498]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_6911.sock
+[debug] [2020-04-14T00:00:59.690Z] [worker-~diagnostic~-a9433fa3-332c-47b2-84d0-96a6b2009498]: BUSY
+[debug] [2020-04-14T00:00:59.695Z] [worker-~diagnostic~-8d5c7f69-0958-47c0-89d0-e4e6085a1ed2]: exited
+[debug] [2020-04-14T00:00:59.695Z] [worker-~diagnostic~-8d5c7f69-0958-47c0-89d0-e4e6085a1ed2]: FINISHED
+[debug] [2020-04-14T00:01:00.125Z] [runtime-status] [6911] Functions runtime initialized. {"cwd":"/Users/vadini/goali-functions/functions","node_version":"13.0.1"}
+[debug] [2020-04-14T00:01:00.126Z] [runtime-status] [6911] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-14T00:01:00.129Z] [runtime-status] [6911] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-14T00:01:00.130Z] [runtime-status] [6911] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-14T00:01:00.130Z] [runtime-status] [6911] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-14T00:01:00.844Z] [worker-~diagnostic~-a9433fa3-332c-47b2-84d0-96a6b2009498]: IDLE
+[debug] [2020-04-14T00:01:02.578Z] File /Users/vadini/goali-functions/functions/handlers/users.js changed, reloading triggers
+[debug] [2020-04-14T00:01:03.582Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-14T00:01:03.582Z] [worker-~diagnostic~-a9433fa3-332c-47b2-84d0-96a6b2009498]: FINISHING
+[debug] [2020-04-14T00:01:03.582Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-14T00:01:03.592Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-14T00:01:03.592Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-14T00:01:03.592Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-14T00:01:03.592Z] [worker-~diagnostic~-11e5ffe8-ded5-4d43-bdd7-f1b73fbd96ce]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_6913.sock
+[debug] [2020-04-14T00:01:03.592Z] [worker-~diagnostic~-11e5ffe8-ded5-4d43-bdd7-f1b73fbd96ce]: BUSY
+[debug] [2020-04-14T00:01:03.593Z] [worker-~diagnostic~-a9433fa3-332c-47b2-84d0-96a6b2009498]: exited
+[debug] [2020-04-14T00:01:03.593Z] [worker-~diagnostic~-a9433fa3-332c-47b2-84d0-96a6b2009498]: FINISHED
+[debug] [2020-04-14T00:01:03.799Z] [runtime-status] [6913] Functions runtime initialized. {"cwd":"/Users/vadini/goali-functions/functions","node_version":"13.0.1"}
+[debug] [2020-04-14T00:01:03.800Z] [runtime-status] [6913] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-14T00:01:03.801Z] [runtime-status] [6913] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-14T00:01:03.802Z] [runtime-status] [6913] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-14T00:01:03.803Z] [runtime-status] [6913] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-14T00:01:04.207Z] [worker-~diagnostic~-11e5ffe8-ded5-4d43-bdd7-f1b73fbd96ce]: IDLE
+[debug] [2020-04-14T00:01:04.558Z] File /Users/vadini/goali-functions/functions/index.js changed, reloading triggers
+[debug] [2020-04-14T00:01:05.560Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-14T00:01:05.560Z] [worker-~diagnostic~-11e5ffe8-ded5-4d43-bdd7-f1b73fbd96ce]: FINISHING
+[debug] [2020-04-14T00:01:05.560Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-14T00:01:05.565Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-14T00:01:05.565Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-14T00:01:05.565Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-14T00:01:05.566Z] [worker-~diagnostic~-c34a307e-e24a-40c0-8996-a87d5341b9d2]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_6917.sock
+[debug] [2020-04-14T00:01:05.566Z] [worker-~diagnostic~-c34a307e-e24a-40c0-8996-a87d5341b9d2]: BUSY
+[debug] [2020-04-14T00:01:05.568Z] [worker-~diagnostic~-11e5ffe8-ded5-4d43-bdd7-f1b73fbd96ce]: exited
+[debug] [2020-04-14T00:01:05.569Z] [worker-~diagnostic~-11e5ffe8-ded5-4d43-bdd7-f1b73fbd96ce]: FINISHED
+[debug] [2020-04-14T00:01:05.833Z] [runtime-status] [6917] Functions runtime initialized. {"cwd":"/Users/vadini/goali-functions/functions","node_version":"13.0.1"}
+[debug] [2020-04-14T00:01:05.836Z] [runtime-status] [6917] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-14T00:01:05.839Z] [runtime-status] [6917] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-14T00:01:05.841Z] [runtime-status] [6917] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-14T00:01:05.842Z] [runtime-status] [6917] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-14T00:01:06.317Z] [worker-~diagnostic~-c34a307e-e24a-40c0-8996-a87d5341b9d2]: IDLE
+[debug] [2020-04-14T00:01:18.282Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-14T00:01:18.282Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-14T00:01:18.283Z] Accepted request GET /goali-94346/us-central1/api/user --> api
+[debug] [2020-04-14T00:01:18.283Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-14T00:01:18.290Z] [worker-pool] addWorker(api)
+[debug] [2020-04-14T00:01:18.290Z] [worker-pool] Adding worker with key api, total=1
+[debug] [2020-04-14T00:01:18.290Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-04-14T00:01:18.290Z] [worker-api-b4112bbd-870a-4bd3-bdc1-b66b71589b20]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_6920.sock
+[debug] [2020-04-14T00:01:18.290Z] [worker-api-b4112bbd-870a-4bd3-bdc1-b66b71589b20]: BUSY
+[debug] [2020-04-14T00:01:18.529Z] [runtime-status] [6920] Functions runtime initialized. {"cwd":"/Users/vadini/goali-functions/functions","node_version":"13.0.1"}
+[debug] [2020-04-14T00:01:18.530Z] [runtime-status] [6920] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-14T00:01:18.531Z] [runtime-status] [6920] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-14T00:01:18.532Z] [runtime-status] [6920] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-14T00:01:18.533Z] [runtime-status] [6920] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-14T00:01:18.971Z] [runtime-status] [6920] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-14T00:01:18.972Z] [runtime-status] [6920] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-04-14T00:01:18.972Z] [runtime-status] [6920] Running api in mode HTTPS
+[debug] [2020-04-14T00:01:18.974Z] [runtime-status] [6920] Attempting to listen to socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_6920.sock
+[debug] [2020-04-14T00:01:18.979Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-14T00:01:18.989Z] [runtime-status] [6920] Ephemeral server handling GET request
+[info] >  eyJhbGciOiJSUzI1NiIsImtpZCI6ImRjMGMzNWZlYjBjODIzYjQyNzdkZDBhYjIwNDQzMDY5ZGYzMGZkZWEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZ29hbGktOTQzNDYiLCJhdWQiOiJnb2FsaS05NDM0NiIsImF1dGhfdGltZSI6MTU4NjgxODg2OCwidXNlcl9pZCI6IjBrZVhUU2ZyUXZRNjVUaEdjVng2R3d1dWdTSTMiLCJzdWIiOiIwa2VYVFNmclF2UTY1VGhHY1Z4Nkd3dXVnU0kzIiwiaWF0IjoxNTg2ODE4ODY4LCJleHAiOjE1ODY4MjI0NjgsImVtYWlsIjoiZHJlYW15QGVtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJkcmVhbXlAZW1haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.0TY1ApYZ0j4e6sEI8VRSu91ameOx8slQeSSTM8q8meDtwlxAEAoJJz9m8YlkjMsvOo4zgjbo3DA2ZrG4WNLQ6jKXsqENAPo_QnraBDSgyhXzVa-uekVRIqry5s2C_LGwHlE4mCXHPEKxv0NBV1h9MdGxSwjTN_f0iUevGZ2tjBgY-AJtdl54jGDzEWHuJyvPuKbNJysuelXp1JYeVJzKiCQwy53YHqiiIcnRKboIESo9o6idYSzymC3-f9V6RFQbAreyMspkGZyKJ72x8QCU3Ny6kz_eTwwQmZMSCzPnhYSoWwb9YJ5P-w9Db1xhlac2G-3fe_iqjefvPrF9SUOewA
+[debug] [2020-04-14T00:01:19.072Z] [runtime-status] [6920] Ephemeral server survived.
+[info] >  Error while verifying token FirebaseAuthError: Firebase ID token has expired. Get a fresh ID token from your client app and try again (auth/id-token-expired). See https://firebase.google.com/docs/auth/admin/verify-id-tokens for details on how to retrieve an ID token.
+[info] >      at FirebaseAuthError.FirebaseError [as constructor] (/Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/utils/error.js:42:28)
+[info] >      at FirebaseAuthError.PrefixedFirebaseError [as constructor] (/Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/utils/error.js:88:28)
+[info] >      at new FirebaseAuthError (/Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/utils/error.js:147:16)
+[info] >      at /Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/auth/token-verifier.js:199:39
+[info] >      at Object.module.exports [as verify] (/Users/vadini/goali-functions/functions/node_modules/jsonwebtoken/verify.js:126:14)
+[info] >      at /Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/auth/token-verifier.js:191:17
+[info] >      at new Promise (<anonymous>)
+[info] >      at FirebaseTokenVerifier.verifyJwtSignatureWithKey (/Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/auth/token-verifier.js:190:16)
+[info] >      at /Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/auth/token-verifier.js:175:30
+[info] >      at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+[info] >    errorInfo: {
+[info] >      code: 'auth/id-token-expired',
+[info] >      message: 'Firebase ID token has expired. Get a fresh ID token from your client app and try again (auth/id-token-expired). See https://firebase.google.com/docs/auth/admin/verify-id-tokens for details on how to retrieve an ID token.'
+[info] >    },
+[info] >    codePrefix: 'auth'
+[info] >  }
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-14T00:01:19.434Z] [worker-api-b4112bbd-870a-4bd3-bdc1-b66b71589b20]: IDLE
+[debug] [2020-04-14T00:01:19.434Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-14T00:01:24.409Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-14T00:01:24.410Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-14T00:01:24.410Z] Accepted request POST /goali-94346/us-central1/api/login --> api
+[debug] [2020-04-14T00:01:24.410Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-04-14T00:01:24.410Z] [worker-api-b4112bbd-870a-4bd3-bdc1-b66b71589b20]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_6920.sock
+[debug] [2020-04-14T00:01:24.410Z] [worker-api-b4112bbd-870a-4bd3-bdc1-b66b71589b20]: BUSY
+[debug] [2020-04-14T00:01:24.411Z] [runtime-status] [6920] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-14T00:01:24.411Z] [runtime-status] [6920] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-04-14T00:01:24.411Z] [runtime-status] [6920] Running api in mode HTTPS
+[debug] [2020-04-14T00:01:24.412Z] [runtime-status] [6920] Attempting to listen to socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_6920.sock
+[debug] [2020-04-14T00:01:24.413Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-14T00:01:24.433Z] [runtime-status] [6920] Ephemeral server handling POST request
+[info] >  true
+[debug] [2020-04-14T00:01:24.486Z] [runtime-status] [6920] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-14T00:01:25.001Z] [worker-api-b4112bbd-870a-4bd3-bdc1-b66b71589b20]: IDLE
+[debug] [2020-04-14T00:01:25.001Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-14T00:01:36.576Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-14T00:01:36.576Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-14T00:01:36.576Z] Accepted request GET /goali-94346/us-central1/api/user --> api
+[debug] [2020-04-14T00:01:36.576Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-04-14T00:01:36.576Z] [worker-api-b4112bbd-870a-4bd3-bdc1-b66b71589b20]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_6920.sock
+[debug] [2020-04-14T00:01:36.576Z] [worker-api-b4112bbd-870a-4bd3-bdc1-b66b71589b20]: BUSY
+[debug] [2020-04-14T00:01:36.579Z] [runtime-status] [6920] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-14T00:01:36.580Z] [runtime-status] [6920] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-04-14T00:01:36.580Z] [runtime-status] [6920] Running api in mode HTTPS
+[debug] [2020-04-14T00:01:36.580Z] [runtime-status] [6920] Attempting to listen to socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_6920.sock
+[debug] [2020-04-14T00:01:36.581Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-14T00:01:36.585Z] [runtime-status] [6920] Ephemeral server handling GET request
+[info] >  eyJhbGciOiJSUzI1NiIsImtpZCI6IjBiYWJiMjI0NDBkYTAzMmM1ZDAwNDJjZGFhOWQyODVjZjhkMjAyYzQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZ29hbGktOTQzNDYiLCJhdWQiOiJnb2FsaS05NDM0NiIsImF1dGhfdGltZSI6MTU4NjgyMjQ4NCwidXNlcl9pZCI6IjBrZVhUU2ZyUXZRNjVUaEdjVng2R3d1dWdTSTMiLCJzdWIiOiIwa2VYVFNmclF2UTY1VGhHY1Z4Nkd3dXVnU0kzIiwiaWF0IjoxNTg2ODIyNDg0LCJleHAiOjE1ODY4MjYwODQsImVtYWlsIjoiZHJlYW15QGVtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJkcmVhbXlAZW1haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.T-7WBendhlYsfre95eyBBBoK6VnUA_UkOkpiRgFm_aq8kRpbTZQZxqqSWcOQq6JPaNK5LAMgf6mouOhzgE-gVLhE4Kw4GAhYIwt-Lcpn2_PyPRuzfUnlsq__hXq-osXtdseCTR1KMigjXDSuUsgM25eOGFZuNOZkTEbeNxtohILYAyIPdYMF0nB6I_7RgvALJ0sD1jGiKWw7OYSXXjgpMatNh1kS5Vi8h2nnByI-4WzMUrGYZzXW2a4a6vhRdeZFnuH-Wt4p8nJfq97ECTFQBEkf_KrRxAr_R8xkG-ubGNlpRcHPwizTmJ4h2knjMbzPbtIxdrSk5fcod6TQudRshg
+[debug] [2020-04-14T00:01:36.585Z] [runtime-status] [6920] Ephemeral server survived.
+[info] >  {
+[info] >    iss: 'https://securetoken.google.com/goali-94346',
+[info] >    aud: 'goali-94346',
+[info] >    auth_time: 1586822484,
+[info] >    user_id: '0keXTSfrQvQ65ThGcVx6GwuugSI3',
+[info] >    sub: '0keXTSfrQvQ65ThGcVx6GwuugSI3',
+[info] >    iat: 1586822484,
+[info] >    exp: 1586826084,
+[info] >    email: 'dreamy@email.com',
+[info] >    email_verified: false,
+[info] >    firebase: { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: '0keXTSfrQvQ65ThGcVx6GwuugSI3'
+[info] >  }
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-14T00:01:37.721Z] [worker-api-b4112bbd-870a-4bd3-bdc1-b66b71589b20]: IDLE
+[debug] [2020-04-14T00:01:37.722Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-14T00:01:46.757Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-14T00:01:46.758Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-14T00:01:46.758Z] Accepted request GET /goali-94346/us-central1/api/user/DreamyDreamer --> api
+[debug] [2020-04-14T00:01:46.758Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-04-14T00:01:46.758Z] [worker-api-b4112bbd-870a-4bd3-bdc1-b66b71589b20]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_6920.sock
+[debug] [2020-04-14T00:01:46.758Z] [worker-api-b4112bbd-870a-4bd3-bdc1-b66b71589b20]: BUSY
+[debug] [2020-04-14T00:01:46.763Z] [runtime-status] [6920] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-14T00:01:46.764Z] [runtime-status] [6920] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-04-14T00:01:46.764Z] [runtime-status] [6920] Running api in mode HTTPS
+[debug] [2020-04-14T00:01:46.764Z] [runtime-status] [6920] Attempting to listen to socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_6920.sock
+[debug] [2020-04-14T00:01:46.766Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-14T00:01:46.771Z] [runtime-status] [6920] Ephemeral server handling GET request
+[debug] [2020-04-14T00:01:46.773Z] [runtime-status] [6920] Ephemeral server survived.
+[info] >  Error: 9 FAILED_PRECONDITION: The query requires an index. You can create it here: https://console.firebase.google.com/v1/r/project/goali-94346/firestore/indexes?create_composite=Cktwcm9qZWN0cy9nb2FsaS05NDM0Ni9kYXRhYmFzZXMvKGRlZmF1bHQpL2NvbGxlY3Rpb25Hcm91cHMvc2NyZWFtcy9pbmRleGVzL18QARoOCgp1c2VySGFuZGxlEAEaDQoJY3JlYXRlZEF0EAIaDAoIX19uYW1lX18QAg
+[info] >      at callErrorFromStatus (/Users/vadini/goali-functions/functions/node_modules/@grpc/grpc-js/build/src/call.js:30:26)
+[info] >      at Http2CallStream.<anonymous> (/Users/vadini/goali-functions/functions/node_modules/@grpc/grpc-js/build/src/call.js:79:34)
+[info] >      at Http2CallStream.emit (events.js:215:7)
+[info] >      at /Users/vadini/goali-functions/functions/node_modules/@grpc/grpc-js/build/src/call-stream.js:100:22
+[info] >      at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+[info] >    code: 9,
+[info] >    details: 'The query requires an index. You can create it here: https://console.firebase.google.com/v1/r/project/goali-94346/firestore/indexes?create_composite=Cktwcm9qZWN0cy9nb2FsaS05NDM0Ni9kYXRhYmFzZXMvKGRlZmF1bHQpL2NvbGxlY3Rpb25Hcm91cHMvc2NyZWFtcy9pbmRleGVzL18QARoOCgp1c2VySGFuZGxlEAEaDQoJY3JlYXRlZEF0EAIaDAoIX19uYW1lX18QAg',
+[info] >    metadata: Metadata { internalRepr: Map {}, options: {} }
+[info] >  }
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-14T00:01:47.004Z] [worker-api-b4112bbd-870a-4bd3-bdc1-b66b71589b20]: IDLE
+[debug] [2020-04-14T00:01:47.004Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-14T00:03:12.802Z] File /Users/vadini/goali-functions/functions/index.js changed, reloading triggers
+[debug] [2020-04-14T00:03:13.807Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-14T00:03:13.807Z] [worker-~diagnostic~-c34a307e-e24a-40c0-8996-a87d5341b9d2]: FINISHING
+[debug] [2020-04-14T00:03:13.808Z] [worker-pool] Shutting down IDLE worker (api)
+[debug] [2020-04-14T00:03:13.808Z] [worker-api-b4112bbd-870a-4bd3-bdc1-b66b71589b20]: FINISHING
+[debug] [2020-04-14T00:03:13.821Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-14T00:03:13.821Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-14T00:03:13.821Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-14T00:03:13.821Z] [worker-~diagnostic~-fb1623e2-6be4-4dd9-bfa0-24960a38816b]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_6948.sock
+[debug] [2020-04-14T00:03:13.822Z] [worker-~diagnostic~-fb1623e2-6be4-4dd9-bfa0-24960a38816b]: BUSY
+[debug] [2020-04-14T00:03:13.823Z] [worker-~diagnostic~-c34a307e-e24a-40c0-8996-a87d5341b9d2]: exited
+[debug] [2020-04-14T00:03:13.823Z] [worker-~diagnostic~-c34a307e-e24a-40c0-8996-a87d5341b9d2]: FINISHED
+[debug] [2020-04-14T00:03:13.824Z] [worker-api-b4112bbd-870a-4bd3-bdc1-b66b71589b20]: exited
+[debug] [2020-04-14T00:03:13.824Z] [worker-api-b4112bbd-870a-4bd3-bdc1-b66b71589b20]: FINISHED
+[debug] [2020-04-14T00:03:14.199Z] [runtime-status] [6948] Functions runtime initialized. {"cwd":"/Users/vadini/goali-functions/functions","node_version":"13.0.1"}
+[debug] [2020-04-14T00:03:14.200Z] [runtime-status] [6948] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-14T00:03:14.202Z] [runtime-status] [6948] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-14T00:03:14.203Z] [runtime-status] [6948] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-14T00:03:14.204Z] [runtime-status] [6948] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (/Users/vadini/goali-functions/functions/node_modules/express/lib/router/route.js:202:15)
+    at Function.app.<computed> [as post] (/Users/vadini/goali-functions/functions/node_modules/express/lib/application.js:482:19)
+    at Object.<anonymous> (/Users/vadini/goali-functions/functions/index.js:32:5)
+    at Module._compile (internal/modules/cjs/loader.js:971:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1011:10)
+    at Module.load (internal/modules/cjs/loader.js:822:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:730:14)
+    at Module.require (internal/modules/cjs/loader.js:864:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /Users/vadini/.nvm/versions/node/v13.0.1/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:761:33
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-04-14T00:03:15.049Z] [worker-~diagnostic~-fb1623e2-6be4-4dd9-bfa0-24960a38816b]: exited
+[debug] [2020-04-14T00:03:15.049Z] [worker-~diagnostic~-fb1623e2-6be4-4dd9-bfa0-24960a38816b]: FINISHED
+[debug] [2020-04-14T00:03:23.010Z] File /Users/vadini/goali-functions/functions/handlers/users.js changed, reloading triggers
+[debug] [2020-04-14T00:03:24.011Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 0
+[debug] [2020-04-14T00:03:24.011Z] [worker-pool] Cleaned up workers for api: 1 --> 0
+[debug] [2020-04-14T00:03:24.016Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-14T00:03:24.016Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-04-14T00:03:24.018Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-14T00:03:24.018Z] [worker-~diagnostic~-e08b9cf7-85dd-4a51-83d3-bd8146014ffb]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_6953.sock
+[debug] [2020-04-14T00:03:24.019Z] [worker-~diagnostic~-e08b9cf7-85dd-4a51-83d3-bd8146014ffb]: BUSY
+[debug] [2020-04-14T00:03:24.213Z] [runtime-status] [6953] Functions runtime initialized. {"cwd":"/Users/vadini/goali-functions/functions","node_version":"13.0.1"}
+[debug] [2020-04-14T00:03:24.214Z] [runtime-status] [6953] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-14T00:03:24.215Z] [runtime-status] [6953] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-14T00:03:24.216Z] [runtime-status] [6953] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-14T00:03:24.217Z] [runtime-status] [6953] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (/Users/vadini/goali-functions/functions/node_modules/express/lib/router/route.js:202:15)
+    at Function.app.<computed> [as post] (/Users/vadini/goali-functions/functions/node_modules/express/lib/application.js:482:19)
+    at Object.<anonymous> (/Users/vadini/goali-functions/functions/index.js:32:5)
+    at Module._compile (internal/modules/cjs/loader.js:971:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1011:10)
+    at Module.load (internal/modules/cjs/loader.js:822:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:730:14)
+    at Module.require (internal/modules/cjs/loader.js:864:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /Users/vadini/.nvm/versions/node/v13.0.1/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:761:33
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-04-14T00:03:24.612Z] [worker-~diagnostic~-e08b9cf7-85dd-4a51-83d3-bd8146014ffb]: exited
+[debug] [2020-04-14T00:03:24.613Z] [worker-~diagnostic~-e08b9cf7-85dd-4a51-83d3-bd8146014ffb]: FINISHED
+[debug] [2020-04-14T00:05:28.463Z] File /Users/vadini/goali-functions/functions/handlers/users.js changed, reloading triggers
+[debug] [2020-04-14T00:05:29.467Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-04-14T00:05:29.476Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-14T00:05:29.476Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-04-14T00:05:29.476Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-14T00:05:29.476Z] [worker-~diagnostic~-f54648c6-3a94-4020-bc0f-006d39905a31]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_6990.sock
+[debug] [2020-04-14T00:05:29.476Z] [worker-~diagnostic~-f54648c6-3a94-4020-bc0f-006d39905a31]: BUSY
+[debug] [2020-04-14T00:05:29.902Z] [runtime-status] [6990] Functions runtime initialized. {"cwd":"/Users/vadini/goali-functions/functions","node_version":"13.0.1"}
+[debug] [2020-04-14T00:05:29.903Z] [runtime-status] [6990] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-14T00:05:29.906Z] [runtime-status] [6990] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-14T00:05:29.907Z] [runtime-status] [6990] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-14T00:05:29.908Z] [runtime-status] [6990] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-14T00:05:30.657Z] [worker-~diagnostic~-f54648c6-3a94-4020-bc0f-006d39905a31]: IDLE
+[debug] [2020-04-14T00:05:59.942Z] File /Users/vadini/goali-functions/functions/handlers/users.js changed, reloading triggers
+[debug] [2020-04-14T00:06:00.947Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-14T00:06:00.947Z] [worker-~diagnostic~-f54648c6-3a94-4020-bc0f-006d39905a31]: FINISHING
+[debug] [2020-04-14T00:06:00.954Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-14T00:06:00.955Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-14T00:06:00.955Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-14T00:06:00.955Z] [worker-~diagnostic~-b7f75376-09a9-4025-a0e5-2aa4aedca3b9]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_6997.sock
+[debug] [2020-04-14T00:06:00.955Z] [worker-~diagnostic~-b7f75376-09a9-4025-a0e5-2aa4aedca3b9]: BUSY
+[debug] [2020-04-14T00:06:00.960Z] [worker-~diagnostic~-f54648c6-3a94-4020-bc0f-006d39905a31]: exited
+[debug] [2020-04-14T00:06:00.960Z] [worker-~diagnostic~-f54648c6-3a94-4020-bc0f-006d39905a31]: FINISHED
+[debug] [2020-04-14T00:06:01.173Z] [runtime-status] [6997] Functions runtime initialized. {"cwd":"/Users/vadini/goali-functions/functions","node_version":"13.0.1"}
+[debug] [2020-04-14T00:06:01.174Z] [runtime-status] [6997] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-14T00:06:01.176Z] [runtime-status] [6997] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-14T00:06:01.177Z] [runtime-status] [6997] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-14T00:06:01.177Z] [runtime-status] [6997] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-14T00:06:01.676Z] [worker-~diagnostic~-b7f75376-09a9-4025-a0e5-2aa4aedca3b9]: IDLE
+[debug] [2020-04-14T00:06:36.589Z] File /Users/vadini/goali-functions/functions/handlers/users.js changed, reloading triggers
+[debug] [2020-04-14T00:06:37.559Z] File /Users/vadini/goali-functions/functions/handlers/users.js changed, reloading triggers
+[debug] [2020-04-14T00:06:38.561Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-14T00:06:38.561Z] [worker-~diagnostic~-b7f75376-09a9-4025-a0e5-2aa4aedca3b9]: FINISHING
+[debug] [2020-04-14T00:06:38.561Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-14T00:06:38.573Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-14T00:06:38.574Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-14T00:06:38.574Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-14T00:06:38.574Z] [worker-~diagnostic~-4d70ce3f-36b0-40c3-b327-55267a23ef6b]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_7007.sock
+[debug] [2020-04-14T00:06:38.574Z] [worker-~diagnostic~-4d70ce3f-36b0-40c3-b327-55267a23ef6b]: BUSY
+[debug] [2020-04-14T00:06:38.578Z] [worker-~diagnostic~-b7f75376-09a9-4025-a0e5-2aa4aedca3b9]: exited
+[debug] [2020-04-14T00:06:38.578Z] [worker-~diagnostic~-b7f75376-09a9-4025-a0e5-2aa4aedca3b9]: FINISHED
+[debug] [2020-04-14T00:06:39.057Z] [runtime-status] [7007] Functions runtime initialized. {"cwd":"/Users/vadini/goali-functions/functions","node_version":"13.0.1"}
+[debug] [2020-04-14T00:06:39.058Z] [runtime-status] [7007] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-14T00:06:39.062Z] [runtime-status] [7007] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-14T00:06:39.067Z] [runtime-status] [7007] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-14T00:06:39.067Z] [runtime-status] [7007] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-14T00:06:39.890Z] [worker-~diagnostic~-4d70ce3f-36b0-40c3-b327-55267a23ef6b]: IDLE
+[debug] [2020-04-14T00:06:44.344Z] File /Users/vadini/goali-functions/functions/handlers/users.js changed, reloading triggers
+[debug] [2020-04-14T00:06:45.347Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-14T00:06:45.348Z] [worker-~diagnostic~-4d70ce3f-36b0-40c3-b327-55267a23ef6b]: FINISHING
+[debug] [2020-04-14T00:06:45.348Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-14T00:06:45.356Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-14T00:06:45.356Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-14T00:06:45.356Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-14T00:06:45.356Z] [worker-~diagnostic~-c5e8e27c-ca0f-4236-b3c6-6f01c93381a5]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_7009.sock
+[debug] [2020-04-14T00:06:45.356Z] [worker-~diagnostic~-c5e8e27c-ca0f-4236-b3c6-6f01c93381a5]: BUSY
+[debug] [2020-04-14T00:06:45.358Z] [worker-~diagnostic~-4d70ce3f-36b0-40c3-b327-55267a23ef6b]: exited
+[debug] [2020-04-14T00:06:45.358Z] [worker-~diagnostic~-4d70ce3f-36b0-40c3-b327-55267a23ef6b]: FINISHED
+[debug] [2020-04-14T00:06:45.500Z] File /Users/vadini/goali-functions/functions/handlers/users.js changed, reloading triggers
+[debug] [2020-04-14T00:06:45.583Z] [runtime-status] [7009] Functions runtime initialized. {"cwd":"/Users/vadini/goali-functions/functions","node_version":"13.0.1"}
+[debug] [2020-04-14T00:06:45.585Z] [runtime-status] [7009] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-14T00:06:45.586Z] [runtime-status] [7009] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-14T00:06:45.587Z] [runtime-status] [7009] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-14T00:06:45.588Z] [runtime-status] [7009] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-14T00:06:46.063Z] [worker-~diagnostic~-c5e8e27c-ca0f-4236-b3c6-6f01c93381a5]: IDLE
+[debug] [2020-04-14T00:06:46.505Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-14T00:06:46.505Z] [worker-~diagnostic~-c5e8e27c-ca0f-4236-b3c6-6f01c93381a5]: FINISHING
+[debug] [2020-04-14T00:06:46.505Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-14T00:06:46.511Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-14T00:06:46.514Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-14T00:06:46.514Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-14T00:06:46.514Z] [worker-~diagnostic~-15edc072-efe4-4bfa-b919-c0d8b52eb11f]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_7010.sock
+[debug] [2020-04-14T00:06:46.514Z] [worker-~diagnostic~-15edc072-efe4-4bfa-b919-c0d8b52eb11f]: BUSY
+[debug] [2020-04-14T00:06:46.515Z] [worker-~diagnostic~-c5e8e27c-ca0f-4236-b3c6-6f01c93381a5]: exited
+[debug] [2020-04-14T00:06:46.515Z] [worker-~diagnostic~-c5e8e27c-ca0f-4236-b3c6-6f01c93381a5]: FINISHED
+[debug] [2020-04-14T00:06:46.709Z] [runtime-status] [7010] Functions runtime initialized. {"cwd":"/Users/vadini/goali-functions/functions","node_version":"13.0.1"}
+[debug] [2020-04-14T00:06:46.710Z] [runtime-status] [7010] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-14T00:06:46.711Z] [runtime-status] [7010] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-14T00:06:46.713Z] [runtime-status] [7010] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-14T00:06:46.714Z] [runtime-status] [7010] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-14T00:06:47.075Z] [worker-~diagnostic~-15edc072-efe4-4bfa-b919-c0d8b52eb11f]: IDLE
+[debug] [2020-04-14T00:07:12.067Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-14T00:07:12.068Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-14T00:07:12.068Z] Accepted request GET /goali-94346/us-central1/api/user/DreamyDreamer --> api
+[debug] [2020-04-14T00:07:12.068Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-14T00:07:12.077Z] [worker-pool] addWorker(api)
+[debug] [2020-04-14T00:07:12.078Z] [worker-pool] Adding worker with key api, total=1
+[debug] [2020-04-14T00:07:12.078Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-04-14T00:07:12.078Z] [worker-api-c745deb4-7696-4e44-a90b-e968fc930e8e]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_7018.sock
+[debug] [2020-04-14T00:07:12.078Z] [worker-api-c745deb4-7696-4e44-a90b-e968fc930e8e]: BUSY
+[debug] [2020-04-14T00:07:12.469Z] [runtime-status] [7018] Functions runtime initialized. {"cwd":"/Users/vadini/goali-functions/functions","node_version":"13.0.1"}
+[debug] [2020-04-14T00:07:12.471Z] [runtime-status] [7018] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-14T00:07:12.474Z] [runtime-status] [7018] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-14T00:07:12.475Z] [runtime-status] [7018] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-14T00:07:12.475Z] [runtime-status] [7018] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-14T00:07:13.194Z] [runtime-status] [7018] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-14T00:07:13.195Z] [runtime-status] [7018] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-04-14T00:07:13.195Z] [runtime-status] [7018] Running api in mode HTTPS
+[debug] [2020-04-14T00:07:13.197Z] [runtime-status] [7018] Attempting to listen to socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_7018.sock
+[debug] [2020-04-14T00:07:13.201Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-14T00:07:13.208Z] [runtime-status] [7018] Ephemeral server handling GET request
+[debug] [2020-04-14T00:07:13.213Z] [runtime-status] [7018] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-14T00:07:14.243Z] [worker-api-c745deb4-7696-4e44-a90b-e968fc930e8e]: IDLE
+[debug] [2020-04-14T00:07:14.243Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-14T00:07:31.919Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-14T00:07:31.920Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-14T00:07:31.920Z] Accepted request GET /goali-94346/us-central1/api/user/StairwayToHeaven --> api
+[debug] [2020-04-14T00:07:31.920Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-04-14T00:07:31.920Z] [worker-api-c745deb4-7696-4e44-a90b-e968fc930e8e]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_7018.sock
+[debug] [2020-04-14T00:07:31.920Z] [worker-api-c745deb4-7696-4e44-a90b-e968fc930e8e]: BUSY
+[debug] [2020-04-14T00:07:31.921Z] [runtime-status] [7018] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-14T00:07:31.922Z] [runtime-status] [7018] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-04-14T00:07:31.922Z] [runtime-status] [7018] Running api in mode HTTPS
+[debug] [2020-04-14T00:07:31.923Z] [runtime-status] [7018] Attempting to listen to socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_7018.sock
+[debug] [2020-04-14T00:07:31.924Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-14T00:07:31.930Z] [runtime-status] [7018] Ephemeral server handling GET request
+[debug] [2020-04-14T00:07:31.930Z] [runtime-status] [7018] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-14T00:07:32.138Z] [worker-api-c745deb4-7696-4e44-a90b-e968fc930e8e]: IDLE
+[debug] [2020-04-14T00:07:32.138Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-14T00:09:15.856Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-14T00:09:15.856Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-14T00:09:15.857Z] Accepted request POST /goali-94346/us-central1/api/login --> api
+[debug] [2020-04-14T00:09:15.857Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-04-14T00:09:15.857Z] [worker-api-c745deb4-7696-4e44-a90b-e968fc930e8e]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_7018.sock
+[debug] [2020-04-14T00:09:15.857Z] [worker-api-c745deb4-7696-4e44-a90b-e968fc930e8e]: BUSY
+[debug] [2020-04-14T00:09:15.858Z] [runtime-status] [7018] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-14T00:09:15.859Z] [runtime-status] [7018] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-04-14T00:09:15.859Z] [runtime-status] [7018] Running api in mode HTTPS
+[debug] [2020-04-14T00:09:15.859Z] [runtime-status] [7018] Attempting to listen to socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_7018.sock
+[debug] [2020-04-14T00:09:15.866Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-14T00:09:15.897Z] [runtime-status] [7018] Ephemeral server handling POST request
+[info] >  true
+[debug] [2020-04-14T00:09:15.941Z] [runtime-status] [7018] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-14T00:09:16.524Z] [worker-api-c745deb4-7696-4e44-a90b-e968fc930e8e]: IDLE
+[debug] [2020-04-14T00:09:16.524Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-14T00:10:12.887Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-14T00:10:12.887Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-14T00:10:12.887Z] Accepted request POST /goali-94346/us-central1/api/update/62gDB20sI2WxOHFAUOOE/comment --> api
+[debug] [2020-04-14T00:10:12.887Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-04-14T00:10:12.887Z] [worker-api-c745deb4-7696-4e44-a90b-e968fc930e8e]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_7018.sock
+[debug] [2020-04-14T00:10:12.887Z] [worker-api-c745deb4-7696-4e44-a90b-e968fc930e8e]: BUSY
+[debug] [2020-04-14T00:10:12.888Z] [runtime-status] [7018] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-14T00:10:12.888Z] [runtime-status] [7018] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-04-14T00:10:12.889Z] [runtime-status] [7018] Running api in mode HTTPS
+[debug] [2020-04-14T00:10:12.889Z] [runtime-status] [7018] Attempting to listen to socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_7018.sock
+[debug] [2020-04-14T00:10:12.891Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-14T00:10:12.896Z] [runtime-status] [7018] Ephemeral server handling POST request
+[info] >  eyJhbGciOiJSUzI1NiIsImtpZCI6ImRjMGMzNWZlYjBjODIzYjQyNzdkZDBhYjIwNDQzMDY5ZGYzMGZkZWEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZ29hbGktOTQzNDYiLCJhdWQiOiJnb2FsaS05NDM0NiIsImF1dGhfdGltZSI6MTU4NjgyMjk1NiwidXNlcl9pZCI6ImdMTXVNdHBNTk1kbmZxUnNiVVVUd01uMlNEQzIiLCJzdWIiOiJnTE11TXRwTU5NZG5mcVJzYlVVVHdNbjJTREMyIiwiaWF0IjoxNTg2ODIyOTU2LCJleHAiOjE1ODY4MjY1NTYsImVtYWlsIjoidG90aGV0b3BAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInRvdGhldG9wQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.OtPJPbkQnqhrqUJBUyfrG4VUvKdQExOjFx3aIhMQrTC4vcg6gzVb3MYxJ0suxrYJ5EK9TzVhKj9WGH544xan3DlsQ7KHDz2xkkUinEhz5miC-Z3HrK4hQaKUiIyGeQ9LaAGJ3RfzbpVpaFXxcjOmfTvy7eoFgg38yZ1T21zV6Qi-J1L77RB8X1GPPH4TNMDOJXJgU6Kbg4JxF56QTuDXKt-PW0cQb8YNBEXl9Ah74DZTrl2I4eALF5ZmidO-b6NPvT6V7cwx4qZ2VMa4fIw4NRxAzbHJtwbij46Gg6v83aZT_ybcpKY80pCXqCba3_TtlynAnBJsv3XsfvRZjgQx8w
+[debug] [2020-04-14T00:10:12.950Z] [runtime-status] [7018] Ephemeral server survived.
+[info] >  {
+[info] >    iss: 'https://securetoken.google.com/goali-94346',
+[info] >    aud: 'goali-94346',
+[info] >    auth_time: 1586822956,
+[info] >    user_id: 'gLMuMtpMNMdnfqRsbUUTwMn2SDC2',
+[info] >    sub: 'gLMuMtpMNMdnfqRsbUUTwMn2SDC2',
+[info] >    iat: 1586822956,
+[info] >    exp: 1586826556,
+[info] >    email: 'tothetop@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase: { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'gLMuMtpMNMdnfqRsbUUTwMn2SDC2'
+[info] >  }
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-14T00:10:13.774Z] [worker-api-c745deb4-7696-4e44-a90b-e968fc930e8e]: IDLE
+[debug] [2020-04-14T00:10:13.774Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-14T00:12:43.522Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-14T00:12:43.522Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-14T00:12:43.522Z] Accepted request POST /goali-94346/us-central1/api/login --> api
+[debug] [2020-04-14T00:12:43.522Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-04-14T00:12:43.522Z] [worker-api-c745deb4-7696-4e44-a90b-e968fc930e8e]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_7018.sock
+[debug] [2020-04-14T00:12:43.522Z] [worker-api-c745deb4-7696-4e44-a90b-e968fc930e8e]: BUSY
+[debug] [2020-04-14T00:12:43.525Z] [runtime-status] [7018] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-14T00:12:43.526Z] [runtime-status] [7018] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-04-14T00:12:43.526Z] [runtime-status] [7018] Running api in mode HTTPS
+[debug] [2020-04-14T00:12:43.526Z] [runtime-status] [7018] Attempting to listen to socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_7018.sock
+[debug] [2020-04-14T00:12:43.527Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-14T00:12:43.533Z] [runtime-status] [7018] Ephemeral server handling POST request
+[debug] [2020-04-14T00:12:43.533Z] [runtime-status] [7018] Ephemeral server survived.
+[info] >  true
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-14T00:12:44.105Z] [worker-api-c745deb4-7696-4e44-a90b-e968fc930e8e]: IDLE
+[debug] [2020-04-14T00:12:44.105Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-14T00:13:01.094Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-14T00:13:01.095Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-14T00:13:01.095Z] Accepted request POST /goali-94346/us-central1/api/notifications --> api
+[debug] [2020-04-14T00:13:01.095Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-04-14T00:13:01.095Z] [worker-api-c745deb4-7696-4e44-a90b-e968fc930e8e]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_7018.sock
+[debug] [2020-04-14T00:13:01.095Z] [worker-api-c745deb4-7696-4e44-a90b-e968fc930e8e]: BUSY
+[debug] [2020-04-14T00:13:01.096Z] [runtime-status] [7018] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-14T00:13:01.096Z] [runtime-status] [7018] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-04-14T00:13:01.096Z] [runtime-status] [7018] Running api in mode HTTPS
+[debug] [2020-04-14T00:13:01.096Z] [runtime-status] [7018] Attempting to listen to socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_7018.sock
+[debug] [2020-04-14T00:13:01.097Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-14T00:13:01.102Z] [runtime-status] [7018] Ephemeral server handling POST request
+[info] >  eyJhbGciOiJSUzI1NiIsImtpZCI6IjBiYWJiMjI0NDBkYTAzMmM1ZDAwNDJjZGFhOWQyODVjZjhkMjAyYzQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZ29hbGktOTQzNDYiLCJhdWQiOiJnb2FsaS05NDM0NiIsImF1dGhfdGltZSI6MTU4NjgyMzE2MywidXNlcl9pZCI6IjBrZVhUU2ZyUXZRNjVUaEdjVng2R3d1dWdTSTMiLCJzdWIiOiIwa2VYVFNmclF2UTY1VGhHY1Z4Nkd3dXVnU0kzIiwiaWF0IjoxNTg2ODIzMTYzLCJleHAiOjE1ODY4MjY3NjMsImVtYWlsIjoiZHJlYW15QGVtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJkcmVhbXlAZW1haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.dpwUzc5DjmVMVCtgz0FH8oKMxJxKEb1jnGnDfnK1aH5EMzH5qnvO7lrrPzuQZw7RRkKZZyOy842XXA92JXaesSNOFHXiqdLqQNNY89Y8BJ70zkomLlPc3fbQg1Rp39mGvoqdweAm9loXV6c65iRQbxKhD5nTrhaPt-HWtWkJnF2bvI8X3mPTFiD4ICHe9moQ895qmhlB1NOo9oa6guAccFx0GN-Xon0MKNDuCEIc57uegZFunJvbwkLa2OUYxeHy0M1qfNZ7y6ff_P_ciyyty4x5x-jugG5BdRme-eNiNmeLpld8ztCbgWtU19d5yqFutaM40d7BjbxfZgamox03WQ
+[debug] [2020-04-14T00:13:01.103Z] [runtime-status] [7018] Ephemeral server survived.
+[info] >  {
+[info] >    iss: 'https://securetoken.google.com/goali-94346',
+[info] >    aud: 'goali-94346',
+[info] >    auth_time: 1586823163,
+[info] >    user_id: '0keXTSfrQvQ65ThGcVx6GwuugSI3',
+[info] >    sub: '0keXTSfrQvQ65ThGcVx6GwuugSI3',
+[info] >    iat: 1586823163,
+[info] >    exp: 1586826763,
+[info] >    email: 'dreamy@email.com',
+[info] >    email_verified: false,
+[info] >    firebase: { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: '0keXTSfrQvQ65ThGcVx6GwuugSI3'
+[info] >  }
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-14T00:13:01.412Z] [worker-api-c745deb4-7696-4e44-a90b-e968fc930e8e]: IDLE
+[debug] [2020-04-14T00:13:01.412Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-14T00:14:00.741Z] File /Users/vadini/goali-functions/functions/handlers/users.js changed, reloading triggers
+[debug] [2020-04-14T00:14:01.745Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-14T00:14:01.745Z] [worker-~diagnostic~-15edc072-efe4-4bfa-b919-c0d8b52eb11f]: FINISHING
+[debug] [2020-04-14T00:14:01.745Z] [worker-pool] Shutting down IDLE worker (api)
+[debug] [2020-04-14T00:14:01.745Z] [worker-api-c745deb4-7696-4e44-a90b-e968fc930e8e]: FINISHING
+[debug] [2020-04-14T00:14:01.752Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-14T00:14:01.753Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-14T00:14:01.753Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-14T00:14:01.753Z] [worker-~diagnostic~-3f49aaba-0773-4381-9f8b-0692726f54a4]: Assigning socketPath: /var/folders/gw/39ssvjwx43z61_0glj8__5n00000gn/T/fire_emu_7141.sock
+[debug] [2020-04-14T00:14:01.753Z] [worker-~diagnostic~-3f49aaba-0773-4381-9f8b-0692726f54a4]: BUSY
+[debug] [2020-04-14T00:14:01.758Z] [worker-~diagnostic~-15edc072-efe4-4bfa-b919-c0d8b52eb11f]: exited
+[debug] [2020-04-14T00:14:01.758Z] [worker-~diagnostic~-15edc072-efe4-4bfa-b919-c0d8b52eb11f]: FINISHED
+[debug] [2020-04-14T00:14:01.759Z] [worker-api-c745deb4-7696-4e44-a90b-e968fc930e8e]: exited
+[debug] [2020-04-14T00:14:01.759Z] [worker-api-c745deb4-7696-4e44-a90b-e968fc930e8e]: FINISHED
+[debug] [2020-04-14T00:14:02.174Z] [runtime-status] [7141] Functions runtime initialized. {"cwd":"/Users/vadini/goali-functions/functions","node_version":"13.0.1"}
+[debug] [2020-04-14T00:14:02.176Z] [runtime-status] [7141] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-14T00:14:02.179Z] [runtime-status] [7141] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-14T00:14:02.182Z] [runtime-status] [7141] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-14T00:14:02.184Z] [runtime-status] [7141] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"/Users/vadini/goali-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-14T00:14:02.999Z] [worker-~diagnostic~-3f49aaba-0773-4381-9f8b-0692726f54a4]: IDLE
