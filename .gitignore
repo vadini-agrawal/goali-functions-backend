@@ -1,0 +1,7 @@
+functions/serviceAccountKey.json
+functions/util/config.js
+functions/package-lock.json
+firebase-debug.log
+functions/node-modules
+.firebase/
+dbschema.js
