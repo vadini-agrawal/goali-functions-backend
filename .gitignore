@@ -2,6 +2,7 @@ functions/serviceAccountKey.json
 functions/util/config.js
 functions/package-lock.json
 firebase-debug.log
-functions/node-modules
+functions/node_modules
 .firebase/
 dbschema.js
+functions/node_modules
