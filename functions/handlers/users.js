@@ -125,7 +125,7 @@ exports.getUserDetails = (req, res) => {
         .then(doc => {
             if (doc.exists) {
                 userData.user = doc.data();
-                return db.collection('screams').where('userHandle', '==', req.params.handle)
+                return db.collection('updates').where('userHandle', '==', req.params.handle)
                     .orderBy('createdAt', 'desc')
                     .get();
             } else {
