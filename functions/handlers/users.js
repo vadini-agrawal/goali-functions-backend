@@ -137,13 +137,12 @@ exports.getUserDetails = (req, res) => {
             data.forEach(doc => {
                 userData.updates.push({
                     body: doc.data().body,
-                    updateId: doc.data().updateId,
                     userHandle: doc.data().userHandle,
                     userImage: doc.data().userImage,
                     likeCount: doc.data().likeCount,
                     commentCount: doc.data().commentCount,
                     goalType: doc.data().goalType,
-                    updateId: updateId
+                    updateId: doc.id
                 })
             });
             return res.json(userData);
