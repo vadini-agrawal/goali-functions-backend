@@ -9,7 +9,7 @@ app.use(cors());
 const { db } = require('./util/admin');
 
 const { getAllUpdates, postOneUpdate, getUpdate, commentOnUpdate, deleteUpdate, likeUpdate, unlikeUpdate} = require('./handlers/updates');
-const {signup, login, uploadImage, addUserDetails, getAuthenticatedUser, getUserDetails, markNotificationsRead} = require('./handlers/users');
+const {signup, login, uploadImage, addUserDetails, getAuthenticatedUser, getUserDetails, markNotificationsRead, getNewToken} = require('./handlers/users');
 
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
@@ -28,6 +28,7 @@ app.post('/update/:updateId/comment', FBAuth, commentOnUpdate);
 //Users route
 app.post('/signup', signup);
 app.post('/login', login);
+app.get('/newToken', getNewToken);
 app.post('/user/image', FBAuth, uploadImage);
 app.post('/user', FBAuth, addUserDetails);
 app.get('/user', FBAuth, getAuthenticatedUser);

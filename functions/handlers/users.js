@@ -9,7 +9,11 @@ const config = require('../util/config');
 
 const firebase = require('firebase');
 firebase.initializeApp(config);
+// firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL);
 
+exports.firebase = () => {
+    return firebase;
+}
 // admin.initializeApp({
 //     credential: admin.credential.cert(serviceAccount),
 //     databaseURL:  "https://goali-94346.firebaseio.com"
@@ -65,6 +69,7 @@ exports.signup = (req, res) => {
             //return res.status(201).json({ token })
         }) 
         .then(() => {
+            // window.location.assign('/');
             return res.status(201).json({ token });
         })
         .catch(err => {
@@ -95,7 +100,8 @@ exports.login = (req, res) => {
         return data.user.getIdToken();
     })
     .then(token => {
-        return res.json({token});
+        // window.location.assign('/');
+        return res.status(201).json({ token });
     })
     .catch(err => {
         console.log(err);
@@ -120,7 +126,7 @@ exports.addUserDetails = (req, res) => {
 
 exports.getUserDetails = (req, res) => {
     let userData = {};
-
+    // userData.token = req.params.token;
     db.doc(`/users/${req.params.handle}`).get()
         .then(doc => {
             if (doc.exists) {
@@ -151,17 +157,40 @@ exports.getUserDetails = (req, res) => {
             console.error(err);
             return res.status(500).json({error: err.code});
         })
+    
+}
+
+exports.getNewToken = (data) => {
+    // if (firebase.auth().currentUser != null) {
+    //     firebase.auth().currentUser.getIdToken(true)
+    //     .then((idToken) => {
+    //         return res.status(201).json({ idToken });
+    //     }).catch(err =>  {
+    //         return res.status(500).json({ err });
+    //     });
+    // } else {
+    //     console.log('Something went wrong with the current user.');
+    // }
+    // let newToken;
+    firebase.auth().token.getIdToken(true)
+        .then((token) => {
+            return token;
+        })
+        .catch(err => {
+            console.log(err);
+        })
 }
 
 // Get own user details
 exports.getAuthenticatedUser = (req, res) => {
     let userData = {};
+
     db.doc(`/users/${req.user.handle}`).get()
         .then(doc => {
             if (doc.exists) {
                 userData.credentials = doc.data();
                 return db.collection('likes').where('userHandle', '==', req.user.handle).get();
-            }
+            } 
         })
         .then(data => {
             userData.likes = [];
@@ -170,7 +199,6 @@ exports.getAuthenticatedUser = (req, res) => {
             });
             return db.collection('notifications').where('recipient', '==', req.user.handle)
                 .orderBy('createdAt', 'desc').limit(10).get();
-            //return res.json(userData);
         })
         .then(data => {
             userData.notifications = [];

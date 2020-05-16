@@ -94,6 +94,7 @@ exports.commentOnUpdate = (req, res) => {
         if(!doc.exists) {
             return res.status(404).json({error: 'Update not found.'});
         }
+        newComment.commentCount = doc.data().commentCount + 1;
         return doc.ref.update({ commentCount: doc.data().commentCount + 1});
         //return db.collection('comments').add(newComment);
     })
